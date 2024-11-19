@@ -1,0 +1,171 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 5%; */
+}
+
+.header{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    padding-left: 20%;
+}
+
+.body{
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+
+.footer{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.square{
+    width: 20%;
+    height: 100%;
+    border: solid 1px black;
+    background-color: red;
+  
+}
+
+.circle{
+    width: 250px;
+    height: 140%;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+}
+
+.circle.right{
+    top: -30px;
+    right: 100px;
+}
+.circle.left{
+    top: -30px;
+    left: 100px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    body{
+        display: flex;
+        justify-content: center;
+        overflow: auto;
+    }
+    .container{
+        width: 70%;
+        height: 100vh;
+        border: solid 15px black;
+        border-radius: 10px;
+        position: relative;
+    }
+    .header{
+        width: 100%;
+        height: 30%;
+        padding-left: 0;
+        .square{
+            background-color: aqua;
+        }
+    }
+    .body{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .body:last-child{
+        background-color: black;
+        position: absolute;
+    }
+    .footer{
+        width: 100%;
+        position: unset;
+    }
+    .square{
+        width: 50%;
+        height: 117%;
+    }
+    .square.f{
+        position: absolute;
+        background-color: antiquewhite;
+        height: 100px;
+        bottom: 43px;
+        left: 184px;
+        width: 150px;
+        height: 150px;
+        transform: rotate(45deg);
+    }
+    .circle{
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        
+    }
+    .circle.left{
+        left: 18%;
+        top: 38%;
+    }
+    .circle.right{
+        right: 18%;
+        top: 38%;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .square.f{
+        position: absolute;
+        background-color: antiquewhite;
+        height: 100px;
+        bottom: 43px;
+        left: 184px;
+        width: 150px;
+        height: 150px;
+        transform: rotate(45deg);
+        left: 32.5%;
+        top: 60%;
+    }
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .square.f{
+        position: absolute;
+        background-color: antiquewhite;
+        height: 100px;
+        bottom: 43px;
+        left: 184px;
+        width: 150px;
+        height: 150px;
+        transform: rotate(45deg);
+        left: 25.5%;
+        top: 60%;
+    }
+}
+
